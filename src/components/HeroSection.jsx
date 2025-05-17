@@ -123,7 +123,7 @@ const HeroSection = ({ backgroundImage, headerText }) => {
 
         {/* CTA Button */}
         <div className="cta-container1">
-          <a href="/demopage" className="cta-button1">
+          <a href="/demo" className="cta-button1">
             <span className="cta-text1">BOOK YOUR TURF</span>
             <span className="cta-shine"></span>
           </a>
