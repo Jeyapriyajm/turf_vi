@@ -1,0 +1,217 @@
+.footer-container {
+    background-color: #111111;
+    color: white;
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.footer-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 30px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 20px;
+    flex: 3;
+    justify-content: center;
+}
+
+.footer-nav-column {
+    flex: 1;
+    text-align: left;
+    padding-left: 60px;
+    min-width: 150px;
+}
+
+.footer-nav-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #E2621B;
+}
+
+.footer-nav-column ul {
+    list-style-type: circle;
+    padding: 10px;
+    margin-left: 15px;
+}
+
+.footer-nav-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-nav-column ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-nav-column ul li a:hover {
+    color: #E2621B;
+}
+
+.footer-logo-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-logo {
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+}
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #E2621B;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-copyright {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Social Media Icons */
+.footer-social-media {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-social-media .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-social-media .social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Social media brand colors */
+.social-icon.facebook { background-color: #1877F2; }
+.social-icon.whatsapp { background-color: #25D366; }
+.social-icon.twitter { background-color: #1DA1F2; }
+.social-icon.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-icon.linkedin { background-color: #0077B5; }
+.social-icon.youtube { background-color: #FF0000; }
+
+/* Tablet Responsive (768px and below) */
+@media (max-width: 768px) {
+    .footer-container {
+        padding: 30px 15px;
+    }
+    
+    .footer-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+    
+    .footer-nav-column {
+        padding-left: 30px;
+        flex: 1 1 40%;
+        min-width: 0;
+    }
+    
+    .footer-logo {
+        margin-right: 0;
+        align-self: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .footer-social-media {
+        justify-content: center;
+    }
+}
+
+/* Mobile Responsive (576px and below) */
+@media (max-width: 576px) {
+    .footer-container {
+        padding: 25px 10px;
+    }
+    
+    
+    
+    .footer-logo img {
+        width: 120px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .footer-copyright {
+        order: 2;
+        min-width: 100%;
+    }
+    
+    .footer-social-media {
+        order: 1;
+        justify-content: center;
+        min-width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .footer-nav-column h3 {
+        font-size: 16px;
+    }
+    
+    .footer-nav-column ul li a {
+        font-size: 13px;
+    }
+}
+
+/* Small Mobile Devices (400px and below) */
+@media (max-width: 400px) {
+   
+    
+    .footer-logo img {
+        width: 100px;
+    }
+    
+    .footer-social-media .social-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}

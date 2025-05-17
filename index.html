@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Turf vi - Book sports grounds and turfs online easily. Find football, cricket, and badminton venues near you with real-time availability." />
+    <meta name="keywords" content="turf booking, ground booking, sports turf, football turf, cricket ground, badminton court, online turf booking, sports venues, book turf near me" />
+    <meta name="author" content="Turf vi Team" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Turf vi - Book Sports Grounds & Turfs Online" />
+    <meta property="og:description" content="Discover and book sports turfs for football, cricket, badminton, and more with Turf vi. Check real-time availability and secure your slot in minutes." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.turfvi.com" />
+    <meta property="og:image" content="/assets/favicon.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Turf vi - Book Sports Grounds & Turfs Online" />
+    <meta name="twitter:description" content="Find and book sports turfs near you with Turf vi. Enjoy hassle-free booking for football, cricket, badminton, and more." />
+    <meta name="twitter:image" content="/assets/favicon.png" />
+    <link rel="icon" type="image/png" href="/src/assets/favicon-32x32.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <title>Turf vi - Online Sports Ground Booking</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #262626;
+      }
+      .turfpreloader-ring {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 150px;
+        background: transparent;
+        border: 3px solid #3c3c3c;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 150px;
+        font-family: sans-serif;
+        font-size: 20px;
+        color: #FE7743;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px #FE7743;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+      .turfpreloader-ring::before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        width: 100%;
+        height: 100%;
+        border: 3px solid transparent;
+        border-top: 3px solid #FE7743;
+        border-right: 3px solid #FE7743;
+        border-radius: 50%;
+        animation: turfpreloader-animateC 2s linear infinite;
+      }
+      .turfpreloader-span {
+        display: block;
+        position: absolute;
+        top: calc(50% - 2px);
+        left: 50%;
+        width: 50%;
+        height: 4px;
+        background: transparent;
+        transform-origin: left;
+        animation: turfpreloader-animate 2s linear infinite;
+      }
+      .turfpreloader-span::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #FE7743;
+        top: -6px;
+        right: -8px;
+        box-shadow: 0 0 20px #FE7743;
+      }
+      @keyframes turfpreloader-animateC {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes turfpreloader-animate {
+        0% {
+          transform: rotate(45deg);
+        }
+        100% {
+          transform: rotate(405deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="turfpreloader">
+      <div class="turfpreloader-ring">
+        Loading
+        <span class="turfpreloader-span"></span>
+      </div>
+    </div>
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      window.addEventListener('load', function () {
+        const preloader = document.getElementById('turfpreloader');
+        if (preloader) {
+          preloader.style.display = 'none';
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+.wooproduct-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+}
+
+.wooproduct-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s;
+}
+
+.wooproduct-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wooproduct-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.wooproduct-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.wooproduct-card:hover .wooproduct-image {
+  transform: scale(1.05);
+}
+
+.wooproduct-sale-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+.wooproduct-actions {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.wooproduct-card:hover .wooproduct-actions {
+  opacity: 1;
+}
+
+.wooproduct-actions button,
+.wooproduct-actions a {
+  background: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+.wooproduct-actions button:hover,
+.wooproduct-actions a:hover {
+  background: #f0f0f0;
+}
+
+.wooproduct-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+.wooproduct-price {
+  padding: 0 1rem 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Quick View Modal */
+.wooproduct-quickview-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.wooproduct-quickview {
+  background: #fff;
+  max-width: 500px;
+  width: 90%;
+  padding: 2rem;
+  position: relative;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.wooproduct-quickview img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.wooproduct-quickview-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.wooproduct-description {
+  margin-top: 1rem;
+  color: #555;
+}
+
+.wooproduct-quickview-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.wooproduct-add-btn,
+.wooproduct-view-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: orange;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.wooproduct-view-btn {
+  background: #333;
+}
+
+.wooproduct-add-btn:hover {
+  background: darkorange;
+}
+
+.wooproduct-view-btn:hover {
+  background: #555;
+}
+
+/* Loading State */
+.wooproduct-loading {
+  text-align: center;
+  padding: 4rem;
+}
+
+.wooproduct-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid orange;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

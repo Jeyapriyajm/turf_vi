@@ -1,0 +1,85 @@
+.woo-productdetail-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background: #fff;
+  }
+  
+  .woo-productdetail-image {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .woo-productdetail-info {
+    max-width: 700px;
+  }
+  
+  .woo-productdetail-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .woo-productdetail-price {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: green;
+  }
+  
+  .woo-productdetail-desc {
+    margin-bottom: 1.5rem;
+  }
+  
+  .woo-productdetail-variations table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+  }
+  
+  .woo-productdetail-variations th,
+  .woo-productdetail-variations td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  .woo-productdetail-variation-btn {
+    padding: 0.5rem 1rem;
+    background: #eee;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .woo-productdetail-variation-btn.selected {
+    background: orange;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .woo-productdetail-buttons button {
+    padding: 0.7rem 1.2rem;
+    margin-right: 1rem;
+    background: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .woo-productdetail-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .sale-price {
+    color: red;
+    font-size: 1.5rem;
+  }
+  
+  .regular-price {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 1.2rem;
+  }
+  
+  

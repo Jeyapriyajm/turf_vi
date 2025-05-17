@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.cta-container {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  position: relative;
+  overflow: hidden;
+  background-image: url("../assets/calltoaction-image.jpg");
+  text-align: center;
+  padding: 20px; /* Added padding for smaller screens */
+  font-family: "Poppins", sans-serif;
+}
+
+.cta-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.65); 
+  z-index: 0; 
+}
+
+.cta-heading {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff; 
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.cta-highlight {
+  color: #e2621b;
+}
+
+.cta-text {
+  font-size: 18px;
+  color: #fff; 
+  position: relative;
+  z-index: 1; 
+  text-align: center;
+  max-width: 800px; /* Prevent text from stretching too wide */
+  margin-bottom: 30px;
+  padding: 0 20px; /* Add padding on sides for smaller screens */
+}
+
+.cta-button {
+  background-color: transparent;
+  color: #fff; 
+  font-size: 18px;
+  padding: 15px 30px;
+  border: 2px solid #e2621b;
+  position: relative;
+  z-index: 2; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+  margin-top: 20px; 
+  width: 200px;
+}
+
+.cta-button:hover {
+  background-color: #e2621b; 
+  color: #fff; 
+  border-color: #d15c1a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .cta-heading {
+    font-size: 36px;
+  }
+  
+  .cta-text {
+    font-size: 16px;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-heading {
+    font-size: 32px;
+  }
+  
+  .cta-text {
+    font-size: 15px;
+    max-width: 600px;
+  }
+  
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 16px;
+    width: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cta-container {
+    height: auto;
+    min-height: 100vh; /* Ensure it still covers full viewport height */
+    padding: 60px 20px; /* More padding on top/bottom */
+  }
+  
+  .cta-heading {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  
+  .cta-text {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 15px;
+    width: 160px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cta-heading {
+    font-size: 24px;
+  }
+  
+  .cta-text {
+    font-size: 13px;
+  }
+}

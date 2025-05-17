@@ -1,0 +1,753 @@
+/* Base Styles */
+:root {
+  --primary-color: #0f172a;
+  --primary-dark: #0f172a;
+  --primary-light: #ff9248;
+  --accent-color: #ff6700;
+  --accent-dark: #e65c00;
+  --accent-light: #ff8533;
+  --dark-color: #0f172a;
+  --light-color: #f8fafc;
+  --gray-light: #e2e8f0;
+  --gray-medium: #94a3b8;
+  --gray-dark: #64748b;
+  --text-color: #1e293b;
+  --text-light: #94a3b8;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(255, 103, 0, 0.15);
+  --shadow-xl: 0 20px 25px rgba(255, 103, 0, 0.3);
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --transition: all 0.3s ease;
+}
+
+/* Main container styles */
+.tf3-feature-wrapper {
+  width: 100%;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  overflow-x: hidden;
+  background-color: var(--gray-light);
+}
+
+.tf3-feature-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Hero Section */
+.tf3-hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-dark), var(--dark-color));
+}
+
+.tf3-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.tf3-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7));
+  opacity: 0.95;
+}
+
+.tf3-hero-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f8fafc' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.tf3-hero-diagonal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background: var(--primary-dark);
+  clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%);
+  opacity: 0.3;
+}
+
+.tf3-hero-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.tf3-hero-text-container {
+  width: 100%;
+  max-width: 600px;
+  color: var(--light-color);
+  animation: fadeInUp 1s ease-out;
+}
+
+.tf3-hero-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--light-color);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.tf3-hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, var(--light-color), var(--gray-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.tf3-hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--accent-light);
+}
+
+.tf3-hero-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--gray-light);
+}
+
+.tf3-hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tf3-hero-button {
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  outline: none;
+  box-shadow: var(--shadow-md);
+}
+
+.tf3-hero-button.tf3-primary {
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
+  color: var(--light-color);
+}
+
+.tf3-hero-button.tf3-primary:hover {
+  background: linear-gradient(90deg, var(--accent-dark), var(--accent-color));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tf3-hero-button.tf3-secondary {
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.tf3-hero-button.tf3-secondary:hover {
+  background: var(--accent-light);
+  color: var(--light-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tf3-hero-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  animation: fadeInRight 1s ease-out;
+}
+
+.tf3-hero-image-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+  transition: var(--transition);
+}
+
+.tf3-hero-image-wrapper:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+.tf3-hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.7s ease-in-out;
+}
+
+.tf3-hero-image-wrapper:hover .tf3-hero-image {
+  transform: scale(1.05);
+}
+
+.tf3-hero-image-accent {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 140px;
+  height: 140px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.tf3-hero-image-dots {
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 150px;
+  height: 150px;
+  background-image: radial-gradient(var(--light-color) 2px, transparent 2px);
+  background-size: 15px 15px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* Stats Section */
+.tf3-stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  background: var(--gray-light);
+  position: relative;
+  z-index: 3;
+}
+
+.tf3-stat-item {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  text-align: center;
+  padding: 2rem;
+  background: var(--light-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  border: 1px solid var(--gray-medium);
+}
+
+.tf3-stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tf3-stat-value {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  background: linear-gradient(to right, var(--accent-color), var(--accent-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tf3-stat-label {
+  font-size: 1.125rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* About Section */
+.tf3-about-section {
+  padding: 5rem 2rem;
+  background-color: var(--dark-color);
+  position: relative;
+}
+
+.tf3-about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.tf3-about-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tf3-about-image-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.tf3-about-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.7s ease-in-out;
+}
+
+.tf3-about-image-wrapper:hover .tf3-about-image {
+  transform: scale(1.05);
+}
+
+.tf3-about-image-accent {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, var(--accent-light), var(--accent-color));
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.tf3-about-image-card {
+  position: absolute;
+  bottom: 30px;
+  left: -20px;
+  background: var(--light-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 300px;
+  border: 1px solid var(--gray-medium);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.tf3-about-card-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tf3-about-card-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--light-color);
+}
+
+.tf3-about-card-content {
+  flex: 1;
+}
+
+.tf3-about-card-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.tf3-about-card-text {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.tf3-about-content {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tf3-section-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-light));
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--light-color);
+  margin-bottom: 1.5rem;
+}
+
+.tf3-section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: var(--light-color);
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.tf3-section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--accent-color), var(--accent-light));
+  border-radius: 2px;
+}
+
+.tf3-about-text {
+  margin-bottom: 2.5rem;
+}
+
+.tf3-about-paragraph {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--gray-light);
+  margin-bottom: 1.5rem;
+}
+
+.tf3-features-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.tf3-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--gray-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  border: 1px solid var(--gray-medium);
+}
+
+.tf3-feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-light);
+}
+
+.tf3-feature-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tf3-feature-icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--light-color);
+}
+
+.tf3-feature-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.tf3-about-cta {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tf3-cta-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(to right, var(--accent-color), var(--accent-light));
+  color: var(--light-color);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.tf3-cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to right, var(--accent-dark), var(--accent-color));
+  transition: width 0.5s ease;
+  z-index: -1;
+}
+
+.tf3-cta-button:hover::before {
+  width: 100%;
+}
+
+.tf3-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tf3-cta-button svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.tf3-cta-button:hover svg {
+  transform: translateX(5px);
+}
+
+/* Testimonial Section */
+.tf3-testimonial-section {
+  position: relative;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, var(--gray-light), var(--light-color));
+  overflow: hidden;
+}
+
+.tf3-testimonial-diagonal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 15%;
+  background: var(--gray-light);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  opacity: 0.2;
+}
+
+.tf3-testimonial-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--dark-color);
+}
+
+.tf3-testimonial-quote {
+  font-size: 8rem;
+  line-height: 1;
+  font-family: Georgia, serif;
+  color: rgba(2, 2, 2, 0.192);
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tf3-testimonial-content {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.tf3-testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tf3-testimonial-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--dark-color);
+}
+
+.tf3-testimonial-info {
+  text-align: left;
+}
+
+.tf3-testimonial-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.tf3-testimonial-position {
+  font-size: 0.875rem;
+  color: var(--dark-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .tf3-hero-content {
+    flex-direction: row;
+    align-items: center;
+    padding: 4rem 2rem;
+  }
+
+  .tf3-hero-text-container {
+    flex: 1;
+  }
+
+  .tf3-hero-image-container {
+    flex: 1;
+  }
+
+  .tf3-about-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .tf3-about-image-container {
+    flex: 1;
+    margin: 0;
+  }
+
+  .tf3-about-content {
+    flex: 1;
+    margin: 0;
+  }
+
+  .tf3-features-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .tf3-hero-title {
+    font-size: 4rem;
+  }
+
+  .tf3-hero-subtitle {
+    font-size: 1.75rem;
+  }
+
+  .tf3-section-title {
+    font-size: 3rem;
+  }
+
+  .tf3-features-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .tf3-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .tf3-hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .tf3-hero-description {
+    font-size: 1rem;
+  }
+
+  .tf3-section-title {
+    font-size: 2rem;
+  }
+
+  .tf3-about-paragraph {
+    font-size: 1rem;
+  }
+
+  .tf3-testimonial-content {
+    font-size: 1.25rem;
+  }
+
+  .tf3-stat-value {
+    font-size: 2.5rem;
+  }
+
+  .tf3-stat-label {
+    font-size: 1rem;
+  }
+
+  .tf3-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .tf3-hero-button {
+    width: 100%;
+    text-align: center;
+  }
+}
