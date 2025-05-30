@@ -124,7 +124,7 @@ const HeroSection = ({ backgroundImage, headerText }) => {
 
         {/* CTA Button */}
         <div className="cta-container1">
-          <Link href="/demopage">
+          <Link href="/demopage" legacyBehavior>
             <a className="cta-button1">
               <span className="cta-text1">BOOK YOUR TURF</span>
               <span className="cta-shine"></span>
