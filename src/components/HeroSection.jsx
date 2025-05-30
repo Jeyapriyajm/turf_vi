@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./HeroSection.css";
 import { ChevronDown, Calendar, Clock, MapPin } from "lucide-react";
-import Link from "next/link";
 
 const HeroSection = ({ backgroundImage, headerText }) => {
   const textParts = headerText.split(" ");
@@ -123,13 +122,12 @@ const HeroSection = ({ backgroundImage, headerText }) => {
         </div>
 
         {/* CTA Button */}
-        <Link href="/demopage" legacyBehavior>
-          <a className="cta-button1">
+        <div className="cta-container1">
+          <a href="/demopage" className="cta-button1">
             <span className="cta-text1">BOOK YOUR TURF</span>
             <span className="cta-shine"></span>
           </a>
-        </Link>
-
+        </div>
         {/* Scroll indicator */}
         <div className="scroll-indicator1" onClick={handleScrollDown}>
           <span className="scroll-text1">EXPLORE MORE</span>
