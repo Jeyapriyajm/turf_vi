@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./HeroSection.css";
-import { ChevronDown, Calendar, Clock, MapPin } from "lucide-react";
+import { ChevronDown, Calendar, Clock, MapPin, Link } from "lucide-react";
 
 const HeroSection = ({ backgroundImage, headerText }) => {
   const textParts = headerText.split(" ");
@@ -123,10 +123,10 @@ const HeroSection = ({ backgroundImage, headerText }) => {
 
         {/* CTA Button */}
         <div className="cta-container1">
-          <a href="/demopage" className="cta-button1">
+          <Link to="/demopage" className="cta-button1">
             <span className="cta-text1">BOOK YOUR TURF</span>
             <span className="cta-shine"></span>
-          </a>
+          </Link>
         </div>
         {/* Scroll indicator */}
         <div className="scroll-indicator1" onClick={handleScrollDown}>
