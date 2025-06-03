@@ -23,6 +23,7 @@ import TenantLocations from "./pages/TenantLocations";
 import GroundDetails from "./pages/GroundDetails";
 import AllGrounds from "./pages/AllGrounds";
 import AllLocations from "./pages/AllGrounds";
+import ContactUs from "./components/contact-us";
 
 const App = () => {
   return (
@@ -45,6 +46,7 @@ const App = () => {
           <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/locations" element={<TenantLocations />} />
           <Route path="/all-locations" element={<AllLocations />} />
+          <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
         <Footer />
       </Router>
