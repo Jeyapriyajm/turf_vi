@@ -125,8 +125,8 @@ const HeroSection = ({ backgroundImage, headerText }) => {
         <div className="cta-container1">
           <a href="/demopage" className="cta-button1">
             <span className="cta-text1">BOOK YOUR TURF</span>
-            <span className="cta-shine"></span>
           </a>
+          <span className="cta-shine"></span>
         </div>
         {/* Scroll indicator */}
         <div className="scroll-indicator1" onClick={handleScrollDown}>
