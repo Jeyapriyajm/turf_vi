@@ -26,10 +26,11 @@ import homepageBg from "./homebg.png";
 import bg1 from "./overlay.jpg";
 import one from "./one.png";
 import Two from "./TWO.jpeg";
+import Logo from "./Logo.png";
 
 
 
-export {Two,one,homepageBg,BGImage , DividerImage,ProductImage1,ProductImage2,ProductImage3,SectionImage4,FootballImage,CricketImage,
+export {Logo,Two,one,homepageBg,BGImage , DividerImage,ProductImage1,ProductImage2,ProductImage3,SectionImage4,FootballImage,CricketImage,
     HockeyImage,TableTennisImage,Section3Image,AboutImage,Feature1Image2,Feature1image1,sectionImage,adminImage,
     customerImage,bookingImage,LogoImage2,dividerImage,TestimonialImage,Page2Image,Page3Image,page1Image,bg1,
 }
