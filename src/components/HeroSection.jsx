@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef, useState } from "react";
 import "./HeroSection.css";
 import { ChevronDown, Calendar, Clock, MapPin } from "lucide-react";
