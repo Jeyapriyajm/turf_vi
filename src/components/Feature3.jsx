@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import "./Feature3.css";
 import { HockeyImage, TableTennisImage } from "../assets/index.js";
 import { featureData } from "../Data/features";
+import { Link } from "react-router-dom";
 
 const Feature3 = ({ features = featureData }) => {
   useEffect(() => {
@@ -78,17 +79,17 @@ const Feature3 = ({ features = featureData }) => {
                   turf technology
                 </div>
                 <div className="tf3-hero-buttons">
-                  <a href="/features">
+                  <Link to="/features">
                     <button className="tf3-hero-button tf3-primary">
                       Explore Solutions
                     </button>
-                  </a>
-                  <a href="contact-us">
+                  </Link>
+                  <Link to="contact-us">
                     <button className="tf3-hero-button tf3-secondary">
                       {" "}
                       Contact Us
                     </button>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -199,7 +200,7 @@ const Feature3 = ({ features = featureData }) => {
                 </div>
 
                 <div className="tf3-about-cta">
-                  <a href="/demopage">
+                  <Link to="/demopage">
                     <button className="tf3-cta-button">
                       <span>Schedule a Consultation</span>
 
@@ -216,7 +217,7 @@ const Feature3 = ({ features = featureData }) => {
                         <polyline points="12 5 19 12 12 19"></polyline>
                       </svg>
                     </button>
-                  </a>{" "}
+                  </Link>{" "}
                 </div>
               </div>
             </div>
