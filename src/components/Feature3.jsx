@@ -84,7 +84,7 @@ const Feature3 = ({ features = featureData }) => {
                       Explore Solutions
                     </button>
                   </Link>
-                  <Link to="contact-us">
+                  <Link to="/contact-us">
                     <button className="tf3-hero-button tf3-secondary">
                       {" "}
                       Contact Us
