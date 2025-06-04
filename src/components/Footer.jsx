@@ -1,15 +1,32 @@
-import {
-  Facebook,
-  MessageCircle,
-  Twitter,
-  Instagram,
-  Linkedin,
-  Youtube,
-} from "lucide-react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 import { LogoImage2, Logo } from "../assets";
 
 const Footer = () => {
+  // Define Quick Links with internal paths
+  const quickLinks = [
+    { text: "Book a Turf", path: "/demopage" },
+    { text: "Turf Owner Login", path: "https://turfvi.app/sign-in-tenants/" },
+    { text: "Player Login", path: "/player-login" },
+    { text: "My Bookings", path: "/my-bookings" },
+    { text: "FAQs", path: "/faqs" },
+    { text: "Contact Us", path: "/contact-us" },
+    { text: "About Us", path: "/aboutus" },
+  ];
+
+  // Define Terms & Policies with external URLs
+  const policyLinks = [
+    { text: "Privacy Policy", url: "https://turfvi.com/privacy-policy" },
+    { text: "Terms & Conditions", url: "https://turfvi.com/terms" },
+    {
+      text: "Refund & Cancellation Policy",
+      url: "https://turfvi.com/refund-policy",
+    },
+    { text: "Cookie Policy", url: "https://turfvi.com/cookie-policy" },
+    { text: "Disclaimer", url: "https://turfvi.com/disclaimer" },
+    { text: "User Agreement", url: "https://turfvi.com/user-agreement" },
+  ];
+
   return (
     <footer className="footer-container">
       {/* Main Footer Content */}
@@ -35,20 +52,12 @@ const Footer = () => {
                 <span className="heading-underline"></span>
               </h3>
               <ul className="footer-links">
-                {[
-                  "Book a Turf",
-                  "Turf Owner Login",
-                  "Player Login",
-                  "My Bookings",
-                  "FAQs",
-                  "Contact Us",
-                  "About Us",
-                ].map((link, index) => (
+                {quickLinks.map((link, index) => (
                   <li key={index}>
-                    <a href="#" className="footer-link">
-                      {link}
+                    <Link to={link.path} className="footer-link">
+                      {link.text}
                       <span className="link-underline"></span>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -61,17 +70,15 @@ const Footer = () => {
                 <span className="heading-underline"></span>
               </h3>
               <ul className="footer-links">
-                {[
-                  "Privacy Policy",
-                  "Terms & Conditions",
-                  "Refund & Cancellation Policy",
-                  "Cookie Policy",
-                  "Disclaimer",
-                  "User Agreement",
-                ].map((link, index) => (
+                {policyLinks.map((link, index) => (
                   <li key={index}>
-                    <a href="#" className="footer-link">
-                      {link}
+                    <a
+                      href={link.url}
+                      className="footer-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.text}
                       <span className="link-underline"></span>
                     </a>
                   </li>
@@ -106,22 +113,58 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <div className="footer-social-media">
-            <a href="#" className="social-icon facebook">
+            <a
+              href="https://www.facebook.com/turfvi"
+              className="social-icon facebook"
+              aria-label="Follow us on Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="#" className="social-icon whatsapp">
+            <a
+              href="https://wa.me/1234567890"
+              className="social-icon whatsapp"
+              aria-label="Contact us on WhatsApp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-whatsapp"></i>
             </a>
-            <a href="#" className="social-icon twitter">
+            <a
+              href="https://twitter.com/turfvi"
+              className="social-icon twitter"
+              aria-label="Follow us on Twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" className="social-icon instagram">
+            <a
+              href="https://www.instagram.com/turfvi"
+              className="social-icon instagram"
+              aria-label="Follow us on Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" className="social-icon linkedin">
+            <a
+              href="https://www.linkedin.com/company/turfvi"
+              className="social-icon linkedin"
+              aria-label="Follow us on LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" className="social-icon youtube">
+            <a
+              href="https://www.youtube.com/channel/turfvi"
+              className="social-icon youtube"
+              aria-label="Subscribe to our YouTube channel"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-youtube"></i>
             </a>
           </div>

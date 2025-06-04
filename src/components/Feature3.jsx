@@ -78,12 +78,17 @@ const Feature3 = ({ features = featureData }) => {
                   turf technology
                 </div>
                 <div className="tf3-hero-buttons">
-                  <button className="tf3-hero-button tf3-primary">
-                    Explore Solutions
-                  </button>
-                  <button className="tf3-hero-button tf3-secondary">
-                    Contact Us
-                  </button>
+                  <a href="/features">
+                    <button className="tf3-hero-button tf3-primary">
+                      Explore Solutions
+                    </button>
+                  </a>
+                  <a href="contact-us">
+                    <button className="tf3-hero-button tf3-secondary">
+                      {" "}
+                      Contact Us
+                    </button>
+                  </a>
                 </div>
               </div>
 
@@ -194,21 +199,24 @@ const Feature3 = ({ features = featureData }) => {
                 </div>
 
                 <div className="tf3-about-cta">
-                  <button className="tf3-cta-button">
-                    <span>Schedule a Consultation</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </button>
+                  <a href="/demopage">
+                    <button className="tf3-cta-button">
+                      <span>Schedule a Consultation</span>
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </button>
+                  </a>{" "}
                 </div>
               </div>
             </div>
