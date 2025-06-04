@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import "./HeroSection.css";
-import "./Feature3.css";
 import { ChevronDown, Calendar, Clock, MapPin } from "lucide-react";
 
 const HeroSection = ({ backgroundImage, headerText }) => {
@@ -124,26 +123,9 @@ const HeroSection = ({ backgroundImage, headerText }) => {
         </div>
 
         {/* CTA Button */}
-        <div className="tf3-about-cta">
-          <a href="/demopage">
-            <button className="tf3-cta-button">
-              <span>BOOK YOUR TURF</span>
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </button>
-          </a>{" "}
-        </div>
+        <a href="/demopage">
+          <button>BOOK YOUR TURF</button>
+        </a>
         {/* Scroll indicator */}
         <div className="scroll-indicator1" onClick={handleScrollDown}>
           <span className="scroll-text1">EXPLORE MORE</span>
