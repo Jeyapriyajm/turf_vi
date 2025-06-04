@@ -15,6 +15,7 @@ const HomePage = () => {
   return (
     <div className="text-center p-6">
       {/* Hero Section */}
+
       <HeroSection backgroundImage={bgImage2} headerText="TURF&nbsp; VI" />
 
       {/* Feature Section 1 */}

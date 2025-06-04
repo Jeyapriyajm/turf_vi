@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import "./HeroSection.css";
 import { ChevronDown, Calendar, Clock, MapPin } from "lucide-react";
 
@@ -124,10 +125,9 @@ const HeroSection = ({ backgroundImage, headerText }) => {
 
         {/* CTA Button */}
 
-        <button>
-          {" "}
-          <a href="/demopage">BOOK YOUR TURF</a>
-        </button>
+        <Link to="/demopage">
+          <button>BOOK YOUR TURF</button>
+        </Link>
 
         {/* Scroll indicator */}
         <div className="scroll-indicator1" onClick={handleScrollDown}>
