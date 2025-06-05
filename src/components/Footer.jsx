@@ -8,7 +8,7 @@ const Footer = () => {
     { text: "Book a Turf", path: "/demopage" },
     { text: "Turf Owner Login", path: "https://turfvi.app/sign-in-tenants/" },
     { text: "Player Login", path: "/player-login" },
-    { text: "My Bookings", path: "/my-bookings" },
+    { text: "My Bookings", path: "https://turfvi.app/turf-customer-panel/" },
     { text: "FAQs", path: "/faqs" },
     { text: "Contact Us", path: "/contact-us" },
     { text: "About Us", path: "/aboutus" },

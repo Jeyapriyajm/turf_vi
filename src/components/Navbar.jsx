@@ -1,20 +1,28 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-//import { useCart } from "../context/CartContext";
-import { ShoppingBag, Search, User, Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown, User, Users } from "lucide-react";
 import "./Navbar.css";
 import { one } from "../assets/index";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  {
-    /* const { cartItems } = useCart();
-const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);*/
-  }
+  const [loginDropdown, setLoginDropdown] = useState(false);
+  const [registerDropdown, setRegisterDropdown] = useState(false);
 
   const closeMenu = () => {
     setMenuOpen(false);
+    setLoginDropdown(false);
+    setRegisterDropdown(false);
+  };
+
+  const toggleDropdown = (type) => {
+    if (type === "login") {
+      setLoginDropdown(!loginDropdown);
+      setRegisterDropdown(false);
+    } else if (type === "register") {
+      setRegisterDropdown(!registerDropdown);
+      setLoginDropdown(false);
+    }
   };
 
   return (
@@ -78,78 +86,138 @@ const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);*/
               Pricing
             </NavLink>
           </li>
-          {/*<li className="dropdown">
-            <NavLink
-              to="/shop"
-              className={({ isActive }) =>
-                `nav-link ${isActive ? "active" : ""}`
-              }
-              onClick={closeMenu}
-            >
-              Shop
-            </NavLink>
-            <div className="dropdown-content">
-              <NavLink to="/shop/football" onClick={closeMenu}>
-                Football
-              </NavLink>
-              <NavLink to="/shop/basketball" onClick={closeMenu}>
-                Basketball
-              </NavLink>
-              <NavLink to="/shop/running" onClick={closeMenu}>
-                Running
-              </NavLink>
-              <NavLink to="/shop/fitness" onClick={closeMenu}>
-                Fitness
-              </NavLink>
-            </div>
-          </li>*/}
 
-          {/* Mobile Auth Buttons */}
+          {/* Mobile Auth Dropdowns */}
           <li className="mobile-auth-only">
-            <NavLink
-              to="/login"
-              className="mobile-auth-btn mobile-login"
-              onClick={closeMenu}
-            >
-              Login
-            </NavLink>
-            <NavLink
-              to="/register"
-              className="mobile-auth-btn mobile-register"
-              onClick={closeMenu}
-            >
-              Register
-            </NavLink>
+            <div className="dropdown mobile-dropdown">
+              <button
+                className="mobile-auth-btn mobile-login"
+                onClick={() => toggleDropdown("login")}
+              >
+                Player Login{" "}
+                <ChevronDown
+                  className={`dropdown-arrow ${loginDropdown ? "open" : ""}`}
+                  size={18}
+                />
+              </button>
+              {loginDropdown && (
+                <div className="dropdown-content show">
+                  <a
+                    href="https://turfvi.app/customer-sign-in"
+                    onClick={closeMenu}
+                  >
+                    <User size={16} style={{ marginRight: 6 }} />
+                    Player Login
+                  </a>
+                  <a
+                    href="https://turfvi.app/customer-sign-up"
+                    onClick={closeMenu}
+                  >
+                    <Users size={16} style={{ marginRight: 6 }} />
+                    Player Register
+                  </a>
+                </div>
+              )}
+            </div>
+            <div className="dropdown mobile-dropdown">
+              <button
+                className="mobile-auth-btn mobile-register"
+                onClick={() => toggleDropdown("register")}
+              >
+                Owner Login{" "}
+                <ChevronDown
+                  className={`dropdown-arrow ${registerDropdown ? "open" : ""}`}
+                  size={18}
+                />
+              </button>
+              {registerDropdown && (
+                <div className="dropdown-content show">
+                  <a
+                    href="https://turfvi.app/sign-in-tenants"
+                    onClick={closeMenu}
+                  >
+                    <User size={16} style={{ marginRight: 6 }} />
+                    Owner Login
+                  </a>
+                  <a
+                    href="https://turfvi.app/sign-up-tenants/"
+                    onClick={closeMenu}
+                  >
+                    <Users size={16} style={{ marginRight: 6 }} />
+                    Owner Regiter
+                  </a>
+                </div>
+              )}
+            </div>
           </li>
         </ul>
 
         {/* Right Side Icons */}
         <div className="navbar-right">
           <div className="desktop-auth">
-            <NavLink
-              to="https://turfvi.app/sign-in-tenants"
-              className="login-btn"
-              onClick={closeMenu}
+            <div
+              className="dropdown"
+              onMouseEnter={() => setLoginDropdown(true)}
+              onMouseLeave={() => setLoginDropdown(false)}
             >
-              Login
-            </NavLink>
-            <NavLink
-              to="https://turfvi.app/sign-up-tenants"
-              className="register-btn"
-              onClick={closeMenu}
+              <button className="login-btn">
+                Login{" "}
+                <ChevronDown
+                  className={`dropdown-arrow ${loginDropdown ? "open" : ""}`}
+                  size={18}
+                />
+              </button>
+              {loginDropdown && (
+                <div className="dropdown-content show">
+                  <a
+                    href="https://turfvi.app/sign-in-tenants"
+                    onClick={closeMenu}
+                  >
+                    <User size={16} style={{ marginRight: 6 }} />
+                    Player Login
+                  </a>
+                  <a
+                    href="https://turfvi.app/sign-in-tenants"
+                    onClick={closeMenu}
+                  >
+                    <Users size={16} style={{ marginRight: 6 }} />
+                    Owner Login
+                  </a>
+                </div>
+              )}
+            </div>
+            <div
+              className="dropdown"
+              onMouseEnter={() => setRegisterDropdown(true)}
+              onMouseLeave={() => setRegisterDropdown(false)}
             >
-              Register
-            </NavLink>
+              <button className="register-btn">
+                Register{" "}
+                <ChevronDown
+                  className={`dropdown-arrow ${registerDropdown ? "open" : ""}`}
+                  size={18}
+                />
+              </button>
+              {registerDropdown && (
+                <div className="dropdown-content show">
+                  <a
+                    href="https://turfvi.app/sign-up-tenants"
+                    onClick={closeMenu}
+                  >
+                    <User size={16} style={{ marginRight: 6 }} />
+                    Player Register
+                  </a>
+                  <a
+                    href="https://turfvi.app/sign-up-owners"
+                    onClick={closeMenu}
+                  >
+                    <Users size={16} style={{ marginRight: 6 }} />
+                    Owner Register
+                  </a>
+                </div>
+              )}
+            </div>
           </div>
-          {/* <NavLink
-            to="/slideCart"
-            className="icon-btn cart-icon"
-            onClick={closeMenu}
-          >
-            {" "}
-            {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
-            <ShoppingBag size={24} />
-          </NavLink>*/}
         </div>
       </div>
     </nav>
