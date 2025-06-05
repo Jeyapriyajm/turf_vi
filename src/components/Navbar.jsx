@@ -103,14 +103,14 @@ const Navbar = () => {
               {loginDropdown && (
                 <div className="dropdown-content show">
                   <a
-                    href="https://turfvi.app/customer-sign-in"
+                    href="https://turfvi.app/customer-sign-in/"
                     onClick={closeMenu}
                   >
                     <User size={16} style={{ marginRight: 6 }} />
                     Player Login
                   </a>
                   <a
-                    href="https://turfvi.app/customer-sign-up"
+                    href="https://turfvi.app/customer-sign-up/"
                     onClick={closeMenu}
                   >
                     <Users size={16} style={{ marginRight: 6 }} />
@@ -133,7 +133,7 @@ const Navbar = () => {
               {registerDropdown && (
                 <div className="dropdown-content show">
                   <a
-                    href="https://turfvi.app/sign-in-tenants"
+                    href="https://turfvi.app/sign-in-tenants/"
                     onClick={closeMenu}
                   >
                     <User size={16} style={{ marginRight: 6 }} />
@@ -161,7 +161,7 @@ const Navbar = () => {
               onMouseLeave={() => setLoginDropdown(false)}
             >
               <button className="login-btn">
-                Login{" "}
+                Player Login{" "}
                 <ChevronDown
                   className={`dropdown-arrow ${loginDropdown ? "open" : ""}`}
                   size={18}
@@ -170,18 +170,18 @@ const Navbar = () => {
               {loginDropdown && (
                 <div className="dropdown-content show">
                   <a
-                    href="https://turfvi.app/sign-in-tenants"
+                    href="https://turfvi.app/customer-sign-in/"
                     onClick={closeMenu}
                   >
                     <User size={16} style={{ marginRight: 6 }} />
                     Player Login
                   </a>
                   <a
-                    href="https://turfvi.app/sign-in-tenants"
+                    href="https://turfvi.app/customer-sign-up/"
                     onClick={closeMenu}
                   >
                     <Users size={16} style={{ marginRight: 6 }} />
-                    Owner Login
+                    Player Register
                   </a>
                 </div>
               )}
@@ -192,7 +192,7 @@ const Navbar = () => {
               onMouseLeave={() => setRegisterDropdown(false)}
             >
               <button className="register-btn">
-                Register{" "}
+                Owner Login{" "}
                 <ChevronDown
                   className={`dropdown-arrow ${registerDropdown ? "open" : ""}`}
                   size={18}
@@ -201,14 +201,14 @@ const Navbar = () => {
               {registerDropdown && (
                 <div className="dropdown-content show">
                   <a
-                    href="https://turfvi.app/sign-up-tenants"
+                    href="https://turfvi.app/sign-in-tenants/"
                     onClick={closeMenu}
                   >
                     <User size={16} style={{ marginRight: 6 }} />
-                    Player Register
+                    Owner Login
                   </a>
                   <a
-                    href="https://turfvi.app/sign-up-owners"
+                    href="https://turfvi.app/sign-up-tenants/"
                     onClick={closeMenu}
                   >
                     <Users size={16} style={{ marginRight: 6 }} />
