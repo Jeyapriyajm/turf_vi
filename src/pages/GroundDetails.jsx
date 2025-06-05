@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
+import { QRCodeSVG } from "qrcode.react";
 import "../App.css";
 
 const GroundDetails = () => {
@@ -87,8 +88,8 @@ const GroundDetails = () => {
     );
   }
 
-  // Construct iframe URL using tenant's domain if available, otherwise fallback to a default
-  const bookingIframeUrl = tenant?.domain
+  // Construct booking URL
+  const bookingUrl = tenant?.domain
     ? `https://turfvi.app/${tenant.domain}/booknetic-booking?location_id=${
         ground.id
       }${tenant_id ? `&tenant_id=${tenant_id}` : ""}`
@@ -156,7 +157,7 @@ const GroundDetails = () => {
         <h2 className="ground-section-title">Book This Venue</h2>
         <div className="booking-actions">
           <a
-            href={bookingIframeUrl}
+            href={bookingUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="visit-booking-button"
@@ -164,11 +165,17 @@ const GroundDetails = () => {
             Visit Booking Page
           </a>
         </div>
-        <iframe
-          src={bookingIframeUrl}
-          className="ground-booking-iframe"
-          title="Booknetic Booking"
-        />
+        <div className="qr-code-container">
+          <QRCodeSVG
+            value={bookingUrl}
+            size={200}
+            bgColor="#0f172a"
+            fgColor="#ff6700"
+            level="H"
+            includeMargin={true}
+          />
+          <p className="qr-caption">Scan to Book Instantly</p>
+        </div>
       </div>
     </div>
   );

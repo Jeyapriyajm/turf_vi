@@ -376,13 +376,15 @@ body {
 }
 
 /*---------------- Ground Details Page Styles----------------------- */
+
+
 .ground-details-container {
-  max-width: 1200px;
+  max-width: auto;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5rem 1.5rem;
   font-family: "Poppins", "Segoe UI", Roboto, sans-serif;
-  color: #e2e8f0;
-  background-color: #0f172a;
+  color: #22223b;
+  background-color: #f8fafc;
   min-height: 100vh;
 }
 
@@ -391,103 +393,107 @@ body {
   display: flex;
   align-items: center;
   background: transparent;
-  border: none;
+  border: 1.5px solid #ff6700;
   color: #ff6700;
   font-size: 1rem;
   cursor: pointer;
   margin-bottom: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.25rem;
   border-radius: 50px;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 103, 0, 0.3);
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(255, 103, 0, 0.04);
 }
 
 .ground-back-button:hover {
-  background: rgba(255, 103, 0, 0.1);
-  transform: translateX(-5px);
-}
-
-.ground-back-icon {
-  margin-right: 0.5rem;
+  background: #ff6700;
+  color: #fff;
+  border-color: #ff6700;
+  transform: translateX(-5px) scale(1.04);
 }
 
 /* Hero Section */
 .ground-hero-section {
   text-align: center;
   margin-bottom: 3rem;
-  padding: 2rem;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 103, 0, 0.2);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #ffe0c2;
+  box-shadow: 0 4px 24px rgba(255, 103, 0, 0.06);
 }
 
 .ground-main-heading {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #f8fafc;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #ff6700;
   margin-bottom: 0.5rem;
-  background: linear-gradient(90deg, #f8fafc, #ff6700);
+  background: linear-gradient(90deg, #ff6700 60%, #ff9248 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .ground-subheading {
-  font-size: 1.2rem;
-  color: #94a3b8;
-}
-
-.ground-tenant-name {
-  color: #ff9248;
-  font-weight: 500;
+  font-size: 1.15rem;
+  color: #22223b;
+  opacity: 0.7;
+  letter-spacing: 0.02em;
 }
 
 /* Details Grid */
 .ground-details-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
   margin-bottom: 3rem;
+  align-items: stretch;
 }
 
 .ground-image-container {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  border: 1px solid #334155;
-  height: 100%;
-  min-height: 300px;
+  box-shadow: 0 6px 32px rgba(255, 103, 0, 0.08);
+  border: 1px solid #ffe0c2;
+  min-height: 320px;
+  background: #fff;
 }
 
 .ground-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s cubic-bezier(.4,0,.2,1);
 }
 
 .ground-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 /* Info Section */
 .ground-info {
-  padding: 1.5rem;
-  background: #1e293b;
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  border: 1px solid #334155;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(255, 103, 0, 0.06);
+  border: 1px solid #ffe0c2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .ground-section-title {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   margin-bottom: 1.5rem;
-  color: #f8fafc;
+  color: #ff6700;
   position: relative;
   display: inline-block;
   padding-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 .ground-section-title::after {
@@ -497,79 +503,96 @@ body {
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #ff6700, transparent);
+  background: linear-gradient(90deg, #ff6700 60%, transparent);
   border-radius: 2px;
 }
 
 .ground-info-item {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   display: flex;
   flex-direction: column;
 }
 
 .ground-info-label {
   font-weight: 600;
-  color: #94a3b8;
+  color: #ff6700;
   margin-bottom: 0.25rem;
 }
 
 .ground-info-value {
-  color: #f8fafc;
+  color: #22223b;
 }
 
 /* Tenant Info */
 .tenant-info {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #334155;
+  border-top: 1px solid #ffe0c2;
 }
 
-.tenant-info-title {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+.tenant-info h3 {
+  font-size: 1.15rem;
   color: #ff9248;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
 /* Booking Section */
 .ground-booking-section {
   margin-top: 3rem;
+  text-align: center;
 }
 
 .booking-actions {
-  text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .visit-booking-button {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(90deg, #ff6700, #ff9248);
-  color: white;
+  padding: 0.9rem 2.4rem;
+  background: linear-gradient(90deg, #ff6700 60%, #ff9248 100%);
+  color: #fff;
   text-decoration: none;
   border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 103, 0, 0.3);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 18px rgba(255, 103, 0, 0.10);
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  border: none;
+  outline: none;
 }
 
 .visit-booking-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 103, 0, 0.5);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 8px 32px rgba(255, 103, 0, 0.18);
+  background: linear-gradient(90deg, #ff9248 20%, #ff6700 100%);
 }
 
-.ground-iframe-container {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  border: 1px solid #334155;
-  background: #1e293b;
+.qr-code-container {
+  margin: 2.5rem auto 0 auto;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 32px rgba(255, 103, 0, 0.08);
+  border: 1px solid #ffe0c2;
+  display: inline-block;
 }
 
-.ground-booking-iframe {
-  width: 100%;
-  height: 600px;
-  border: none;
+.qr-code-container svg {
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(255, 103, 0, 0.06);
+}
+
+.qr-caption {
+  margin-top: 1.4rem;
+  color: #ff6700;
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 4px #fff6ed;
 }
 
 /* Loading and Error States */
@@ -586,7 +609,7 @@ body {
 .ground-loading-spinner {
   width: 50px;
   height: 50px;
-  border: 4px solid rgba(255, 103, 0, 0.3);
+  border: 4px solid #ffe0c2;
   border-radius: 50%;
   border-top-color: #ff6700;
   animation: spin 1s ease-in-out infinite;
@@ -614,47 +637,40 @@ body {
 
 .ground-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 103, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(255, 103, 0, 0.10);
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .ground-details-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
-
-  .ground-main-heading {
-    font-size: 2rem;
-  }
-
   .ground-image-container {
-    min-height: 250px;
-  }
-
-  .ground-booking-iframe {
-    height: 500px;
+    min-height: 220px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .ground-details-container {
-    padding: 1rem;
+    padding: 1rem 0.5rem;
   }
-
   .ground-hero-section {
-    padding: 1.5rem 1rem;
+    padding: 1.2rem 0.5rem;
   }
-
   .ground-main-heading {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
-
   .ground-section-title {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
-
-  .ground-booking-iframe {
-    height: 400px;
+  .qr-code-container {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    border-radius: 14px;
+  }
+  .visit-booking-button {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
   }
 }
 
